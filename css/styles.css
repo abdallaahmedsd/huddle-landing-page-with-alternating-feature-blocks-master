@@ -1,3 +1,4 @@
+/* <global rules> */
 :root {
   --pink: hsl(322, 100%, 66%); /* Primary color */
   /* Neutral colors */
@@ -17,9 +18,190 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1370px;
+  }
+}
+
 .heading-font-family {
   font-family: 'Poppins', sans-serif;
 }
+
+.btn {
+  font-size: 0.77rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.get-started-btn {
+  padding: 0.9rem;
+  width: 230px;
+  color: white;
+  background-color: var(--pink);
+  transition: filter .3s;
+}
+
+.get-started-btn:hover {
+  filter: brightness(0.8);
+}
+
+.try-btn , .title {
+  color: var(--vdk-cayn);
+}
+
+.title , .preview {
+  line-height: 1.5;
+}
+/* </global rules> */
+
+/* <landing page>*/
+.landing-page {
+  min-height: 100vh;
+  background-image: url('../images/bg-hero-mobile.svg');
+  background-color: var(--very-pale-cayn);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .landing-page {
+    background-image: url('../images/bg-hero-desktop.svg');
+  }
+}
+
+.landing-page header {
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.landing-page header .logo-container {
+  width: 7rem;
+}
+
+.landing-page header .logo-container .logo {
+  max-width: 100%;
+}
+
+.landing-page header .try-btn {
+  background-color: white;
+  padding: 0.4rem 1.5rem;
+  box-shadow: 0 2px 6px #8080804d;
+  transition: background-color .3s;
+}
+
+.landing-page header .try-btn:hover {
+  background-color: #fffcdc;
+}
+
+.landing-page .content {
+  padding: 3rem 0.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.landing-page .content .details {
+  text-align: center;
+}
+
+.landing-page .content .details .title {
+  font-size: 1.6rem;
+  max-width: 300px;
+  margin: auto;
+}
+
+.landing-page .content .details .preview {
+  margin: 1.5rem 0;
+}
+
+.landing-page .content .img-container img {
+  max-width: 100%;
+}
+
+@media (min-width: 992px) {
+  .btn {
+    font-size: 0.8rem;
+  }
+
+  .get-started-btn {
+    padding: 1.2rem;
+    width: 300px;
+    font-size: 1rem;
+  }
+
+  .landing-page header {
+    height: 8rem;
+  }
+
+  .landing-page header .logo-container {
+    width: 12rem;
+  }
+
+
+  .landing-page .content {
+    flex-direction: row;
+    padding: 0;
+    gap: 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .landing-page .content .details {
+    text-align: left;
+    flex-basis: 38%;
+  }
+
+  .landing-page .content .img-container {
+    flex-basis: 55%;
+  }
+
+  .landing-page .content .details .title {
+    font-size: 2.5rem;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .landing-page header .try-btn {
+    padding: 0.9rem 4rem;
+  }
+
+}
+/* </landing page> */
 
 
 
