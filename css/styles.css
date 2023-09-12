@@ -50,11 +50,11 @@ body {
 
 @media (min-width: 1400px) {
   .container {
-    width: 1370px;
+    width: 1300px;
   }
 }
 
-.heading-font-family {
+h1 , h2 {
   font-family: 'Poppins', sans-serif;
 }
 
@@ -84,6 +84,10 @@ body {
 
 .title , .preview {
   line-height: 1.5;
+}
+
+.img-container img {
+  max-width: 100%;
 }
 /* </global rules> */
 
@@ -149,10 +153,6 @@ body {
   margin: 1.5rem 0;
 }
 
-.landing-page .content .img-container img {
-  max-width: 100%;
-}
-
 @media (min-width: 992px) {
   .btn {
     font-size: 0.8rem;
@@ -202,6 +202,68 @@ body {
 
 }
 /* </landing page> */
+
+/* <main content>*/
+main {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+main .boxes {
+  gap: 2.5rem;
+}
+
+main .boxes , main .boxes .box {
+  display: flex;
+  flex-direction: column;
+}
+
+main .boxes .box {
+  padding: 3.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 2px #80808020;
+  gap: 4rem;
+}
+
+main .boxes .box .img-container {
+  width: 85%;
+  margin: auto;
+}
+
+main .boxes .box .details .preview {
+  color: var(--grayish-blue);
+  margin-top: 1.2rem;
+}
+
+@media (min-width: 992px) {
+  main {
+    padding: 10rem 0;
+  }
+
+  main .boxes .box {
+    flex-direction: row;
+    align-items: center;
+    gap: 6rem;
+  }
+
+  main .boxes .box:not(:nth-child(2)) {
+    flex-direction: row-reverse;
+  }
+
+  main .boxes .box {
+    text-align: left;
+  }
+
+  main .boxes .box:not(.flowing-conversation) .details ,
+  main .boxes .box.flowing-conversation .img-container{
+    padding: 0 8rem 0 6rem;
+  }
+
+  main .boxes .box .details .title {
+    font-size: 1.9rem;
+  }
+}
+/* </main content> */
 
 
 
